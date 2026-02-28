@@ -49,55 +49,53 @@ header .call-btn {
     text-decoration: none;
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
-    height: 450px;
-    background: url('images/batteries.png') center center / cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    background: #004080;
+    padding: 50px 0;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top:0; left:0;
-    width:100%; height:100%;
-    background: rgba(0,64,128,0.5); /* semi-transparent overlay */
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
 }
 
 .hero-text {
-    position: relative;
-    text-align: center;
+    max-width: 550px;
     color: white;
-    z-index: 1;
-    max-width: 700px;
 }
 
 .hero-text h1 {
-    font-size: 2.2em;
-    margin-bottom: 15px;
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 .hero-text p {
     font-size: 1.2em;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .hero-text .btn {
-    display: inline-block;
     background: #ff6600;
-    padding: 12px 25px;
     color: white;
-    border-radius: 5px;
+    padding: 12px 25px;
     text-decoration: none;
+    border-radius: 5px;
     font-weight: bold;
 }
 
-/* Products */
+.hero-image img {
+    width: 500px;
+    max-width: 100%;
+}
+
+/* Products Section */
 .products {
-    padding: 50px;
+    padding: 50px 20px;
     text-align: center;
 }
 
@@ -139,10 +137,10 @@ header .call-btn {
     padding-left: 20px;
 }
 
-/* Why Choose Us */
+/* Why Choose Us Section */
 .why-us {
     background: #f4f4f4;
-    padding: 50px;
+    padding: 50px 20px;
     text-align: center;
 }
 
@@ -162,18 +160,9 @@ header .call-btn {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Testimonials */
-.testimonials {
-    background: #004080;
-    color: white;
-    padding: 30px;
-    text-align: center;
-    font-style: italic;
-}
-
-/* Contact */
+/* Contact Section */
 .contact {
-    padding: 50px;
+    padding: 50px 20px;
     text-align: center;
 }
 
@@ -187,18 +176,17 @@ footer {
 
 /* Responsive */
 @media (max-width: 900px) {
-    .hero {
-        height: 350px;
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
     }
-
-    .hero-text h1 {
-        font-size: 1.8em;
+    .hero-text {
+        max-width: 100%;
+        margin-bottom: 20px;
     }
-
-    .hero-text p {
-        font-size: 1em;
+    .hero-image img {
+        width: 100%;
     }
-
     .product-cards, .services-cards {
         flex-direction: column;
         align-items: center;
