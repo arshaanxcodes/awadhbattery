@@ -51,28 +51,51 @@ header .call-btn {
 
 /* Hero */
 .hero {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 50px;
-    background: linear-gradient(to right, #004080, #0099ff);
-    color: white;
-    text-align: center;
+    position: relative;
+    height: 450px;
+    overflow: hidden;
 }
 
-.hero h1 {
-    font-size: 2.5em;
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 64, 128, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    color: white;
+}
+
+.hero-overlay h1 {
+    font-size: 2.2em;
     margin-bottom: 15px;
 }
 
-.hero .btn {
+.hero-overlay p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-overlay .btn {
     display: inline-block;
     background: #ff6600;
     padding: 12px 25px;
     color: white;
     border-radius: 5px;
     text-decoration: none;
-    margin-top: 20px;
+    font-weight: bold;
 }
 
 /* Products */
@@ -168,8 +191,17 @@ footer {
 /* Responsive */
 @media (max-width: 900px) {
     .hero {
-        flex-direction: column;
+        height: 350px;
     }
+
+    .hero-overlay h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-overlay p {
+        font-size: 1em;
+    }
+
     .product-cards, .services-cards {
         flex-direction: column;
         align-items: center;
